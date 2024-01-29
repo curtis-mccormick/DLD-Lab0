@@ -5,10 +5,11 @@ module tb ();
    logic 	b;
    logic 	c;
    logic 	y;
+   logic	z;
    logic        clk;   
    
   // instantiate device under test
-   silly dut (a, b, c, y);
+   silly dut (a, b, c, y, z);
 
    // 2 ns clock
    initial 
@@ -21,50 +22,50 @@ module tb ();
    initial
      begin
     
-	#0   a = $random;	
-	#0   b = $random;	
-	#0   c = $random;
+	#0   a = 0;	
+	#0   b = 0;	
+	#0   c = 0;
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;
+	#20  a = 0;	
+	#0   b = 0;	
+	#0   c = 1;
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
+	#20  a = 0;	
+	#0   b = 1;	
+	#0   c = 0;	
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
+	#20  a = 1;	
+	#0   b = 0;
+	#0   c = 0;	
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
+	#20  a = 0;	
+	#0   b = 1;	
+	#0   c = 1;	
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
+	#20  a = 1;	
+	#0   b = 1;	
+	#0   c = 0;	
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
+	#20  a = 1;	
+	#0   b = 0;	
+	#0   c = 1;	
 
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
-
-	#20  a = $random;	
-	#0   b = $random;	
-	#0   c = $random;	
-
-	#20  a = $random;	
+	#20  a = 1;	
+	#0   b = 1;	
+	#0   c = 1;	
+/*
+	#20  a = 1;	
 	#0   b = $random;	
 	#0   c = $random;	
 
-	#20  a = $random;	
+	#20  a = 1;	
+	#0   b = $random;	
+	#0   c = $random;	
+
+	#20  a = 1;	
 	#0   b = $random;	
 	#0   c = $random;		
-	
+	*/
      end
 
    
